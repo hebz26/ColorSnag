@@ -1,6 +1,8 @@
 const colorPickerBtn = document.querySelector("#color-picker");
 const colorList = document.querySelector(".all-colors");
+const clearAll = document.querySelector(".clear-all");
 const pickedColors = JSON.parse(localStorage.getItem("picked-colors")) || [];
+
 const copyColor = (elem) => {
   navigator.clipboard.writeText(elem.dataset.color);
   elem.innerText = "Copied";
@@ -8,6 +10,7 @@ const copyColor = (elem) => {
 };
 
 const showColors = () => {
+  if (!pickedColors.length) return; //return if theres no picked colors
   colorList.innerHTML = pickedColors
     .map(
       (color) => `<li class="color">
@@ -18,6 +21,9 @@ const showColors = () => {
     </li>`
     )
     .join(""); //generates li for each picked color and adds it to list
+
+  document.querySelector(".picked-colors").classList.remove("hide");
+
   //copy hexcode on click
   document.querySelectorAll(".color").forEach((li) => {
     li.addEventListener("click", (e) =>
@@ -45,4 +51,12 @@ const activateEyeDropper = async () => {
   }
 };
 
+//clearing all picked colors
+const clearAllColors = () => {
+  pickedColors.length = 0;
+  localStorage.setItem("picked-colors", JSON.stringify(pickedColors));
+  document.querySelector(".picked-colors").classList.add("hide");
+};
+
+clearAll.addEventListener("click", clearAllColors);
 colorPickerBtn.addEventListener("click", activateEyeDropper);

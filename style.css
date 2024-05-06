@@ -41,6 +41,10 @@ body {
     background: #5372f0;
 }
 
+.picked-colors.hide{
+    display: none;
+}
+
 .picked-colors{
     margin: 10px 15px;
 }
