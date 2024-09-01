@@ -8,6 +8,9 @@ ColorSnag is a google chrome extension designed to simplify color selection and 
 - **Saved Colors**: Store and view your picked colors in an organized list for easy reference.
 - **Palette Maker**: Create and manage custom color palettes, save and copy them.
 - **Copy Functionality**: Easily copy colors or entire palettes to your clipboard with a single click.
+  
+## Watch a Demo
+https://youtu.be/-nIGgbyT8a4
 
 ## Try It Out
 1. Download the zip file of this code.
