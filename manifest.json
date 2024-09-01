@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "ColorSnag",
-    "description": "A simple color picker and color palette maker extension. The perfect all in one tool for designers",
+    "description": "A simple color picker and color palette maker extension. The perfect all in one tool for designers.",
     "version": "1.0",
     "permissions": ["tabs", "clipboardRead", "clipboardWrite"],
     "action": {
