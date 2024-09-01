@@ -1,8 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "Color Picker",
-    "description": "A simple color picker extension. Easily pick any color on the screen, view a history of picked colors, and copy or clear them with a single click.",
+    "name": "ColorSnag",
+    "description": "A simple color picker and color palette maker extension. The perfect all in one tool for designers",
     "version": "1.0",
+    "permissions": ["tabs", "clipboardRead", "clipboardWrite"],
     "action": {
         "default_popup": "index.html"
     },

@@ -3,22 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- For Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Color Snag</title>
   </head>
   <body>
     <div class="pop-up">
-      <div class="picker">
-        <button id="color-picker">Pick Color</button>
+      <!-- TABS CONTAINER -->
+      <div class="tabs">
+        <div class="left-half-tab active">
+          <button class="tab-btn active" data-tab="color-picker-tab">
+            Color Picker
+          </button>
+        </div>
+        <div class="right-half-tab">
+          <button class="tab-btn" data-tab="palette-maker-tab">
+            Palette Maker
+          </button>
+        </div>
       </div>
-      <div class="picked-colors hide">
-        <header>
-          <p class="title">Picked Colors</p>
-          <span class="clear-all">Clear All</span>
-        </header>
-        <ul class="all-colors"></ul>
+      <!-- COLOR PICKER TAB -->
+      <div id="color-picker-tab" class="tab-content active">
+        <div class="picker">
+          <button id="color-picker">Pick Color</button>
+        </div>
+        <div class="picked-colors hide">
+          <header>
+            <p class="title">Picked Colors</p>
+            <span class="clear-all clear">Clear All</span>
+          </header>
+          <ul class="all-colors"></ul>
+        </div>
+      </div>
+      <!-- PALETTE MAKER TAB -->
+      <div id="palette-maker-tab" class="tab-content">
+        <div class="maker">
+          <button id="palette-maker">Make New Palette</button>
+        </div>
+        <div class="my-palettes">
+          <header>
+            <p class="title">My Palettes</p>
+            <span class="clear-all-p clear">Clear All</span>
+          </header>
+          <ul class="all-palettes" id="palette-list"></ul>
+        </div>
       </div>
     </div>
+    <script src="script.js" defer></script>
   </body>
 </html>
